@@ -1,7 +1,11 @@
 # slack-plugin-docker
 
 Configuration and scripts for building and testing slack-plugin
-(https://github.com/jenkinsci/slack-plugin) with a Docker container.
+(https://github.com/jenkinsci/slack-plugin) with a Docker container. Building
+with Docker has dubious value, other than providing a consistent environment
+between developers, because developers are likely to be using an IDE on their
+host systems that still needs to be setup and configured, but being able to
+quickly and easily standup a Jenkins server is extremely valuable.
 
 **Note** that these scripts and configurations were created for a boot2docker
 environment. If you need to make changes for other environments, make sure to
