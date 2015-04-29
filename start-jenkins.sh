@@ -12,7 +12,7 @@ else
         docker restart jenkins
     else
         echo "Starting docker container jenkins"
-        docker run -d --name jenkins -p 8080:8080 jenkins
+        docker run -d --name jenkins -p 8080:8080 jenkins:1.596.2
     fi
 fi
 
