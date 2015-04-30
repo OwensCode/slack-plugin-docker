@@ -2,7 +2,7 @@
 
 docker run --rm -t -i \
     -v $PWD/../slack-plugin:/slack-plugin \
-    -v $PWD/m2repo:/var/m2repo \
+    -v $PWD/../slack-plugin-docker/m2repo:/var/m2repo \
     slack-plugin-build \
     mvn clean package
 
