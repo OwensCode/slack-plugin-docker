@@ -7,9 +7,9 @@ between developers, because developers are likely to be using an IDE on their
 host systems that still needs to be setup and configured, but being able to
 quickly and easily standup a Jenkins server is extremely valuable.
 
-**Note** that these scripts and configurations were created for a boot2docker
-environment. If you need to make changes for other environments, make sure to
-build something in so it keeps working for everyone.
+**Note** that these scripts and configurations were created for a
+boot2docker/docker-machine environment. If you need to make changes for other
+environments, make sure to build something in so it keeps working for everyone.
 
 The scripts are pretty simple and are in many cases conveniences, so small
 personal customizations can often be made by just running the commands directly
@@ -24,6 +24,17 @@ instructions to get it working. You'll basically need the following.
 1. boot2docker init
 2. boot2docker start
 3. eval $(boot2docker shellinit)
+
+Setup docker-machine
+--------------------
+
+See https://www.docker.com/docker-machine for instructions on installing and setting
+up docker-machine. The steps below use a machine name of default, but use whatever
+settings and naming you prefer. You can even create your machine in a cloud.
+
+1. docker-machine create default
+2. docker-machine start default
+3. eval $(docker-machine env default)
 
 Building using the Docker container
 -----------------------------------
@@ -81,7 +92,7 @@ whether the container has been started previously and just needs to be
 restarted, or if it needs to be started for the first time. After startup it
 should print out the URL for accessing Jenkins from your browser.
 
-Note that for boot2docker it will show the IP address of the VM.
+Note that for boot2docker/docker-machine it should show the IP address of the VM.
 
 To stop the container: docker stop jenkins
 To stop and remove the Jenkins container: reset-jenkins.sh
