@@ -15,7 +15,7 @@ The scripts are pretty simple and are in many cases conveniences, so small
 personal customizations can often be made by just running the commands directly
 from the command line.
 
-Setup boot2docker
+Option 1: Setup boot2docker
 -----------------
 
 If you need to, install boot2docker (http://boot2docker.io/) and follow the
@@ -25,7 +25,7 @@ instructions to get it working. You'll basically need the following.
 2. boot2docker start
 3. eval $(boot2docker shellinit)
 
-Setup docker-machine
+Option 2: Setup docker-machine
 --------------------
 
 See https://www.docker.com/docker-machine for instructions on installing and setting
