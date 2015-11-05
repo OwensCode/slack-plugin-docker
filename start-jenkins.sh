@@ -1,5 +1,7 @@
 #!/bin/sh
 
+JENKINS_VERSION=1.625.1
+
 RUNNING=$(docker ps --filter 'name=jenkins' | wc -l)
 
 if [ "${RUNNING}" -gt 1 ]; then
@@ -12,7 +14,7 @@ else
         docker restart jenkins
     else
         echo "Starting docker container jenkins"
-        docker run -d --name jenkins -p 8080:8080 jenkins:1.596.2
+        docker run -d --name jenkins -p 8080:8080 jenkins:${JENKINS_VERSION}
     fi
 fi
 
