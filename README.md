@@ -69,7 +69,7 @@ Building using the Docker container
       so the container can read the project for building, and the target output
       directory will remain when the container is removed at the end of the
       build.
-   3. Map the m2repo in the current directory to a volumne on /var/m2repo. This
+   3. Map the m2repo in the current directory to a volume on /var/m2repo. This
       directory will contain the Maven artifacts that are downloaded as
       dependencies during the build.  This means the artifacts are preserved
       during builds, which is very useful because the largest part of the build
