@@ -95,5 +95,6 @@ should print out the URL for accessing Jenkins from your browser.
 Note that for boot2docker/docker-machine it should show the IP address of the VM.
 
 To stop the container: docker stop jenkins
+
 To stop and remove the Jenkins container: reset-jenkins.sh
 
