@@ -98,3 +98,20 @@ To stop the container: docker stop jenkins
 
 To stop and remove the Jenkins container: reset-jenkins.sh
 
+Debugging
+---------
+
+The debug-plugin.sh script can be used for debugging the plugin, after you've
+built it. There are some issues with debugging through a docker container, so
+it has limited usefulness. Every time you make code changes, you will need to
+stop the debug container, rebuild the plugin, and restart the debug container.
+However, if you do not have a working environment on your local machine, it
+could still be useful.
+
+If you _do_ have a working local environment, you should be able to startup a
+debug session using "mvn hpi:run". This starts Jenkins in Jetty container. More
+information:
+
+* https://jenkinsci.github.io/maven-hpi-plugin/
+* https://wiki.jenkins-ci.org/display/JENKINS/Plugin+tutorial#Plugintutorial-DebuggingaPlugin
+
