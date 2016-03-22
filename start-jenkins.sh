@@ -1,6 +1,10 @@
 #!/bin/sh
 
-JENKINS_VERSION=1.625.1
+DOCKER_IMAGE="jenkins"
+JENKINS_VERSION=1.642.2
+
+DOCKER_IMAGE="jenkinsci/jenkins"
+JENKINS_VERSION=1.652
 
 RUNNING=$(docker ps --filter 'name=jenkins' | wc -l)
 
@@ -14,7 +18,7 @@ else
         docker restart jenkins
     else
         echo "Starting docker container jenkins"
-        docker run -d --name jenkins -p 8080:8080 jenkins:${JENKINS_VERSION}
+        docker run -d --name jenkins -p 8080:8080 ${DOCKER_IMAGE}:${JENKINS_VERSION}
     fi
 fi
 
